@@ -13,8 +13,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-//  Running using commandline
+//  Running using Terminal
 //  mvn clean test -Dkarate.options="--tags @smoke" -Dtest=GarageRunner.java
+//  After running from Terminal you can see the report in: target/cucumber-html-reports/overview-failures.html
 
 @KarateOptions(tags = { "@smoke", "@alltests", "~@ignore" }) // important: do not use @RunWith(Karate.class) !
 public class GarageRunner {
