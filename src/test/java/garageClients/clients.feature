@@ -14,21 +14,32 @@ Feature: First Test Clients
   Scenario: Call Clients per ID
     Given path '/clients/1'
     When method get
-    And print response
+    Then status 200
     Then match response.firstName == "Peter"
     And match response.lastName == "Anema"
     And match response.clientNumber == "12464"
-
 
   Scenario: Update a Client
     Given path 'clients/1'
     And request { "firstName": "Truus", "lastName": "Henksen","clientNumber": "12324"}
     When method put
-    Then print response
+    Then status 200
 
     Given path '/clients/1'
     When method get
-    And print response
+    Then status 200
     Then match response.firstName == "Truus"
     And match response.lastName == "Henksen"
     And match response.clientNumber == "12324"
+
+  Scenario: Add a Client
+    Given path 'clients'
+    And request { "firstName": "Henk", "lastName": "de Geweldige","clientNumber": "12345"}
+    When method post
+    Then status 201
+    * def id = response
+
+    Given path 'clients/' + id
+    When method delete
+    Then status 204
+    Then print response
