@@ -1,0 +1,20 @@
+[
+  {
+    "firstName": "Peter",
+    "lastName": "Anema",
+    "id": 1,
+    "clientNumber": "12464"
+  },
+  {
+    "firstName": "Truus",
+    "lastName": "Jansen",
+    "id": 2,
+    "clientNumber": "13464"
+  },
+  {
+    "firstName": "Jan",
+    "lastName": "Jansen",
+    "id": 3,
+    "clientNumber": "14564"
+  }
+]
