@@ -14,8 +14,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 //  Running using commandline
-//  mvn clean test -Dkarate.options="--tags @smoke" -Dtest=BffRunner.java
-//  mvn clean test -Dkarate.env="tst" -Dkarate.options="--tags @alltests" -Dtest=BffRunner.java
+//  mvn clean test -Dkarate.options="--tags @smoke" -Dtest=GarageRunner.java
 
 @KarateOptions(tags = { "@smoke", "@alltests", "~@ignore" }) // important: do not use @RunWith(Karate.class) !
 public class GarageRunner {
