@@ -2,19 +2,19 @@
   {
     "firstName": "Peter",
     "lastName": "Anema",
-    "id": 1,
-    "clientNumber": "12464"
+    "telephoneNumber": "06-12345678",
+    "id": 1
   },
   {
     "firstName": "Truus",
     "lastName": "Jansen",
-    "id": 2,
-    "clientNumber": "13464"
+    "telephoneNumber": "06-87654321",
+    "id": 2
   },
   {
     "firstName": "Jan",
     "lastName": "Jansen",
-    "id": 3,
-    "clientNumber": "14564"
+    "telephoneNumber": "06-12348765",
+    "id": 3
   }
 ]
