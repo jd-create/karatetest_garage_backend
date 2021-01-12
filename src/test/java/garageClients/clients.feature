@@ -34,12 +34,24 @@ Feature: First Test Clients
 
   Scenario: Add a Client
     Given path 'clients'
-    And request { "firstName": "Henk", "lastName": "de Geweldige","clientNumber": "12345"}
+    And request
+    """
+    {
+      "firstName" : "Jurgen",
+      "lastName" : "Kervezee",
+      "clientNumber" : "22",
+      "streetName": "Hamerstraat",
+      "houseNumber": "35",
+      "houseNumberAddition": "A",
+      "postalCode": "1400ZZ",
+      "homeTown": "Zeist"
+    }
+    """
     When method post
     Then status 201
     * def id = response
 
     Given path 'clients/' + id
-    When method delete
-    Then status 204
+    When method get
+    Then status 200
     Then print response
